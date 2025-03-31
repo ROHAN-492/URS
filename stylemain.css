@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:#71BBB2; 
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+.logo img {
+    max-width: 200px;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button{
+    background-color:#497D74;
+    border: none;
+    color:black;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color:#27445D;
+}

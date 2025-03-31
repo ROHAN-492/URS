@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URS</title>
+    <link rel="shortcut icon" href="./Untitled design.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styledashboardtrial.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Your Space</h1>
+        <div class="grid" id="grid-container">
+            <div class="box add-box" id="add-box">+</div>
+        </div>
+    </div>
+
+    <div id="password-modal" class="hidden">
+        <div class="modal-content">
+            <h2 id="modal-box-name"></h2>
+            <p><strong>Current Password:</strong> <span id="current-password">No password set</span></p>
+            <input type="password" id="password-input" placeholder="Enter password">
+            <button id="toggle-password">Show</button>
+            <div class="modal-buttons">
+                <button id="save-password">Save Password</button>
+                <button id="delete-password">Delete Password</button>
+                <button id="close-modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./scriptdashboardtrial.js"></script>
+</body>
+</html>

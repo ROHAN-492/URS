@@ -1,0 +1,223 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #71BBB2;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 900px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    margin: 50px auto;
+}
+
+h1 {
+    color: #27445D;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.box {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: #497D74;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.box:hover {
+    background: #27445D;
+}
+
+.add-box {
+    width: 100px;
+    height: 100px;
+    background: #ddd;
+    font-size: 30px;
+    color: #497D74;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.add-box:hover {
+    background: #bbb;
+}
+
+.menu {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: #497D74;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+    display: none;
+    color:white;
+}
+
+.box:hover .menu {
+    display: block;
+}
+
+.menu-options {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    background:#497D74;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 100;
+}
+
+.menu:hover .menu-options {
+    display: block;
+}
+
+.menu-options div {
+    padding: 5px 10px;
+    cursor: pointer;
+    color:white;
+}
+
+.menu-options div:hover {
+    background: #27445D;
+}
+
+/* Password Modal */
+.password-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    display: none;
+    z-index: 1000;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.password-modal .modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.password-actions {
+    margin-top: 10px;
+}
+
+button {
+    margin: 5px;
+    padding: 8px 15px;
+    border: none;
+    background: #497D74;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #27445D;
+}
+#password-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    width: 300px;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.modal-content h2 {
+    color: #27445D;
+}
+
+.modal-buttons {
+    margin-top: 15px;
+}
+
+.modal-buttons button {
+    background-color: #497D74;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.modal-buttons button:hover {
+    background-color: #27445D;
+}
+/* Make the grid system responsive */
+@media (max-width: 1024px) {  /* Tablets */
+    .box, .add-box {
+        flex: 1 1 calc(33.33% - 15px); /* 3 columns */
+    }
+}
+
+@media (max-width: 768px) {  /* Small tablets & large phones */
+    .box, .add-box {
+        flex: 1 1 calc(50% - 15px); /* 2 columns */
+    }
+}
+
+@media (max-width: 480px) {  /* Mobile devices */
+    .box, .add-box {
+        flex: 1 1 calc(100% - 15px); /* 1 column */
+        width: 80px;
+        height: 80px;
+        font-size: 14px;
+    }
+}
